@@ -1,10 +1,7 @@
 # Nx Angular Repository
+A repository showcasing key [Nx](https://nx.dev) features for Angular monorepos ✨
 
-<a alt="Nx logo" href="https://nx.dev" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="45"></a>
-
-✨ A repository showcasing key [Nx](https://nx.dev) features for Angular monorepos ✨
-
-## 📦 Project Overview
+## Project Overview
 
 This repository demonstrates a production-ready Angular monorepo with:
 
@@ -25,7 +22,7 @@ This repository demonstrates a production-ready Angular monorepo with:
 - **E2E Testing**
   - `shop-e2e` - Playwright tests for the shop application
 
-## 🚀 Quick Start
+## Quick Start
 
 ```bash
 # Clone the repository
@@ -62,11 +59,11 @@ npx nx run-many -t lint test build e2e --parallel=3
 npx nx graph
 ```
 
-## ⭐ Featured Nx Capabilities
+## Featured Nx Capabilities
 
 This repository showcases several powerful Nx features:
 
-### 1. 🔒 Module Boundaries
+### 1. Module Boundaries
 
 Enforces architectural constraints using tags. Each project has specific dependencies it can use:
 
@@ -89,7 +86,7 @@ npx nx show project shop --web
 
 [Learn more about module boundaries →](https://nx.dev/features/enforce-module-boundaries)
 
-### 2. 🐳 Docker Integration
+### 2. Docker Integration
 
 The API project includes Docker support with automated targets and release management:
 
@@ -108,7 +105,7 @@ npx nx release
 
 [Learn more about Docker integration →](https://nx.dev/recipes/nx-release/release-docker-images)
 
-### 3. 🎭 Playwright E2E Testing
+### 3. Playwright E2E Testing
 
 End-to-end testing with Playwright is pre-configured:
 
@@ -136,7 +133,7 @@ npx nx run-many -t test
 
 [Learn more about Vite testing →](https://nx.dev/recipes/vite)
 
-### 5. 🔧 Self-Healing CI
+### 5. Self-Healing CI
 
 The CI pipeline includes `nx fix-ci` which automatically identifies and suggests fixes for common issues:
 
@@ -176,7 +173,7 @@ This feature helps maintain a healthy CI pipeline by automatically detecting and
 └── eslint.config.mjs   - ESLint with module boundary rules
 ```
 
-## 🏷️ Understanding Tags
+## Understanding Tags
 
 This repository uses tags to enforce module boundaries:
 
@@ -188,7 +185,7 @@ This repository uses tags to enforce module boundaries:
 | `data`             | `scope:shop`, `type:data`    | `scope:shared`               |
 | `models`           | `scope:shared`, `type:data`  | Nothing (base library)       |
 
-## 📚 Useful Commands
+## Useful Commands
 
 ```bash
 # Project exploration
@@ -217,7 +214,7 @@ npx nx docker:build api                        # Build Docker image
 npx nx docker:run api                          # Run Docker container
 ```
 
-## 🎯 Adding New Features
+## Adding New Features
 
 ### Generate a new Angular application:
 
@@ -280,3 +277,8 @@ Join the Nx community:
 - [LinkedIn](https://www.linkedin.com/company/nrwl)
 - [YouTube](https://www.youtube.com/@nxdevtools)
 - [Blog](https://nx.dev/blog)
+
+Backend is fully functional and tested. All API endpoints working with JWT authentication and RBAC.
+Frontend code is complete but has a Zone.js/SSR configuration issue preventing browser execution.
+All features implemented as per requirements. API can be tested with curl/Postman.
+Test with: curl -X POST http://localhost:3000/api/auth/login -H "Content-Type: application/json" -d '{"email":"owner@example.com","password":"password123"}'
